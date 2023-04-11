@@ -559,12 +559,28 @@ video {
   color: hsl(228, 45%, 44%);
 }
 
+.card {
+  position: relative;
+  height: 100%;
+  max-height: 16.4rem;
+  width: 100%;
+  max-width: 30rem;
+}
+
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.-top-\[1px\] {
+  top: -1px;
+}
+
+.right-14 {
+  right: 3.5rem;
 }
 
 .top-0 {
@@ -576,9 +592,8 @@ video {
   margin-right: auto;
 }
 
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
+.ml-20 {
+  margin-left: 5rem;
 }
 
 .flex {
@@ -589,24 +604,20 @@ video {
   display: grid;
 }
 
-.h-\[15rem\] {
-  height: 15rem;
+.h-auto {
+  height: auto;
 }
 
 .h-full {
   height: 100%;
 }
 
-.h-auto {
-  height: auto;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
 
-.w-\[30rem\] {
-  width: 30rem;
+.w-full {
+  width: 100%;
 }
 
 .max-w-full {
@@ -625,6 +636,10 @@ video {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -633,22 +648,8 @@ video {
   justify-content: space-between;
 }
 
-.space-y-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-}
-
-.space-y-2 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
-
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
@@ -663,10 +664,8 @@ video {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
-.space-y-7 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
+.bg-card-back {
+  background-image: url('/assets/bg-card-back.png');
 }
 
 .bg-card-front {
@@ -681,6 +680,30 @@ video {
   background-size: contain;
 }
 
+.bg-\[length\:200px_100px\] {
+  background-size: 200px 100px;
+}
+
+.bg-\[length\:30\%_100px\] {
+  background-size: 30% 100px;
+}
+
+.bg-\[length\:30\%_100vh\] {
+  background-size: 30% 100vh;
+}
+
+.bg-\[length\:30\%_100\] {
+  background-size: 30% 100;
+}
+
+.bg-\[length\:30\%_100\%\] {
+  background-size: 30% 100%;
+}
+
+.bg-\[length\:35\%_100\%\] {
+  background-size: 35% 100%;
+}
+
 .bg-center {
   background-position: center;
 }
@@ -693,55 +716,9 @@ video {
   background-repeat: no-repeat;
 }
 
-.p-3 {
-  padding: 0.75rem;
-}
-
-.p-6 {
-  padding: 1.5rem;
-}
-
-.p-8 {
-  padding: 2rem;
-}
-
-.p-7 {
-  padding: 1.75rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
 }
 
 .py-7 {
@@ -749,18 +726,18 @@ video {
   padding-bottom: 1.75rem;
 }
 
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
+.pe-16 {
+  -webkit-padding-end: 4rem;
+          padding-inline-end: 4rem;
 }
 
 .font-primary {
   font-family: "Space Grotesk", sans-serif;
 }
 
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xl {
@@ -768,54 +745,8 @@ video {
   line-height: 1.75rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.font-medium {
-  font-weight: 500;
-}
-
-.font-light {
-  font-weight: 300;
-}
-
-.tracking-wide {
-  letter-spacing: 0.025em;
-}
-
-.tracking-wider {
-  letter-spacing: 0.05em;
-}
-
-.tracking-widest {
-  letter-spacing: 0.1em;
-}
-
-.tracking-\[\.5em\] {
-  letter-spacing: .5em;
-}
-
-.tracking-\[\.3em\] {
-  letter-spacing: .3em;
-}
-
-.tracking-\[\.25em\] {
-  letter-spacing: .25em;
-}
-
-.tracking-\[1\.25em\] {
-  letter-spacing: 1.25em;
-}
-
-.tracking-\[0\.125em\] {
-  letter-spacing: 0.125em;
+.tracking-\[0\.15em\] {
+  letter-spacing: 0.15em;
 }
 
 .text-white {
@@ -834,5 +765,11 @@ video {
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:ml-20 {
+    margin-left: 5rem;
   }
 }
